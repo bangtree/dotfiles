@@ -316,12 +316,12 @@ you should place your code here."
             ("o" "NEXT's this buffer" tags-tree ":OPEN:")
             ("O" "NEXT's all buffers" tags ":OPEN:")
 
-            ("p" "PROJECT's w/TODO's"
-             tags-tree "+PROJECT-SOMEDAY"
-             ((org-use-tag-inheritance t)))
+            ("p" "PROJECT's"
+             tags "+PROJECT-SOMEDAY"
+             ((org-use-tag-inheritance nil)))
 
-            ("P" "PROJECT's and SOMEDAY's w/TODO's"
-             tags-tree ":PROJECT:|:SOMEDAY:"
+            ("P" "PROJECT's and SOMEDAY's"
+             tags ":PROJECT:|:SOMEDAY:"
              ((org-use-tag-inheritance t)))
 
             ("w" tags-tree #(":PROJECT:/WAIT" 0 14 (face org-warning)))
