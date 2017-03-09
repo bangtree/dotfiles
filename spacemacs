@@ -322,7 +322,7 @@ you should place your code here."
 
             ("P" "PROJECT's and SOMEDAY's"
              tags ":PROJECT:|:SOMEDAY:"
-             ((org-use-tag-inheritance t)))
+             ((org-use-tag-inheritance nil)))
 
             ("w" tags-tree #(":PROJECT:/WAIT" 0 14 (face org-warning)))
 
