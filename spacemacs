@@ -316,6 +316,8 @@ you should place your code here."
             ("o" "NEXT's this buffer" tags-tree ":OPEN:")
             ("O" "NEXT's all buffers" tags ":OPEN:")
 
+            ("e" "Email" tags "EMAIL")
+
             ("p" "PROJECT's"
              tags "+PROJECT-SOMEDAY"
              ((org-use-tag-inheritance nil)))
@@ -327,13 +329,14 @@ you should place your code here."
             ("w" tags-tree #(":PROJECT:/WAIT" 0 14 (face org-warning)))
 
             ("h" "Test agenda"
-             ((agenda "" ((org-agenda-overriding-header "\nAgenda\n")
-                          (org-agenda-span 'day)
-                          (org-agenda-start-on-weekday nil)
-                          (org-deadline-warning-days 3)
-                          (org-habit-show-habits t)))
-              (tags-todo "+NEXT")
-              (tags "+PROJECT")))
+             ((agenda "")))
+             ;; ((agenda "" ((org-agenda-overriding-header "\nAgenda\n")
+             ;;              (org-agenda-span 'day)
+             ;;              (org-agenda-start-on-weekday nil)
+             ;;              (org-deadline-warning-days 3)
+             ;;              (org-habit-show-habits t)))
+             ;;  (tags-todo "+NEXT")
+             ;;  (tags "+PROJECT")))
 
             ("i" tags #(":PROJECT:" 0 9 (face org-warning))
              ((org-agenda-skip-function
@@ -349,7 +352,7 @@ you should place your code here."
                           (org-agenda-span 'day)
                           (org-agenda-start-on-weekday nil)
                           (org-deadline-warning-days 3)
-                          (org-habit-show-habits nil)))
+                          (org-habit-show-habits t)))
               (tags "+PROJECT")
               (tags-todo "+NEXT")))
 
