@@ -36,7 +36,8 @@ values."
      ess
      git
      gtags
-     haskell
+     (haskell :variables
+              haskell-process-type 'stack-ghci)
      ipython-notebook
      markdown
      org
@@ -329,7 +330,8 @@ you should place your code here."
             ("w" tags-tree #(":PROJECT:/WAIT" 0 14 (face org-warning)))
 
             ("h" "Test agenda"
-             ((agenda "")))
+             ((agenda "" ((org-habit-show-habits t)
+                          (org-agenda-span 'day)))))
              ;; ((agenda "" ((org-agenda-overriding-header "\nAgenda\n")
              ;;              (org-agenda-span 'day)
              ;;              (org-agenda-start-on-weekday nil)
@@ -352,7 +354,7 @@ you should place your code here."
                           (org-agenda-span 'day)
                           (org-agenda-start-on-weekday nil)
                           (org-deadline-warning-days 3)
-                          (org-habit-show-habits t)))
+                          (org-habit-show-habits nil)))
               (tags "+PROJECT")
               (tags-todo "+NEXT")))
 
