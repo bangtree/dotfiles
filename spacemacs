@@ -463,12 +463,12 @@ you should place your code here."
 
     (setq org-return-follows-link t)
 
-    (setq org-refile-use-outline-path 't)
-
     (setq org-bullets-bullet-list '("■" "◆" "▲" "▶"))
 
-    (setq org-refile-targets '((nil :maxlevel . 2)              ; refile to headings in the cur buf
-                               (org-agenda-files :maxlevel . 2) ; refile to any of these files
+    (setq org-outline-path-complete-in-steps nil)
+    (setq org-refile-use-outline-path 'file)
+    (setq org-refile-targets '((nil :maxlevel . 3)              ; refile to headings in the cur buf
+                               (org-agenda-files :maxlevel . 3) ; refile to any of these files
                                ))
 
     (defun npt/afiles ()
