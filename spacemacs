@@ -314,9 +314,6 @@ you should place your code here."
              ((org-agenda-files
                '("~/Desktop/Org/home.org"))))
 
-            ("o" "NEXT's this buffer" tags-tree ":OPEN:")
-            ("O" "NEXT's all buffers" tags ":OPEN:")
-
             ("e" "Email" tags "EMAIL")
 
             ("p" "PROJECT's"
