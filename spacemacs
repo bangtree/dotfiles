@@ -415,10 +415,11 @@ you should place your code here."
     (setq org-use-speed-commands t)
 
     (setq org-todo-keywords
-          '((sequence "TODO(t)" "WAIT(w@/!)" "DONE(d!)")))
+          '((sequence "TODO(t)" "NEXT(n)" "WAIT(w@/!)" "DONE(d!)")))
 
     (setq org-todo-keyword-faces
           (quote (("TODO" . (:foreground "green4"))
+                  ("NEXT" . "SpringGreen")
                   ("WAIT" . "OrangeRed1")
                   ("DONE" . (:foreground "SteelBlue1")))))
 
@@ -448,7 +449,6 @@ you should place your code here."
                           ("WRITING" . ?w)
                           (:startgroup . nil)
                           ("PROJECT" . ?p)
-                          ("NEXT"    . ?n)
                           ("SOMEDAY" . ?s)
                           (:endgroup . nil)))
     ;; Don't split headlines in the middle
@@ -590,4 +590,4 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((((class color) (min-colors 89)) (:foreground "#eaeaea" :background "#181a26"))))
- '(hl-line ((t (:inherit highlight :background "gray20")))))
+ '(hl-line ((t (:inherit highlight :background "gray15")))))
